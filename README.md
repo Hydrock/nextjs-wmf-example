@@ -1,5 +1,9 @@
 # WMF in NextJS
 
+## Remote App
+
+Before using this app, you should run Remote app. See <https://github.com/Hydrock/wmf-remote>
+
 ## NextJS
 
 Next JS creating command (only if host doesn't exists):
@@ -15,3 +19,5 @@ Run host:
 cd host
 npm run dev
 ```
+
+

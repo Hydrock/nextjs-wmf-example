@@ -10,13 +10,13 @@ const RemoteWidget = dynamic(() => import('./RemoteWidget'), {
 export default function RemoteWrapper() {
   return (
     <div>
+      <h1 style={ { color: 'red', textAlign: 'center' } }>
+        React App (Host by NextJS)
+      </h1>
       <div style={{ padding: '20px', outline: 'red dashed 1px', marginBottom: '10px' }}>
         Component from NextJS
       </div>
       <RemoteWidget />
-      <div style={{ padding: '20px', outline: 'red dashed 1px', marginBottom: '10px' }}>
-        Component from NextJS
-      </div>
     </div>
   );
 }
