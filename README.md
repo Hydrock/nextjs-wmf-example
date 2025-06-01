@@ -19,5 +19,3 @@ Run host:
 cd host
 npm run dev
 ```
-
-
