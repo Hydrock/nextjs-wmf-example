@@ -1,7 +1,22 @@
+const { container } = require('webpack');
+const { ModuleFederationPlugin } = container;
 import type { NextConfig } from "next";
 
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  /* config options here */
+  // eslint-disable-next-line
+  // @ts-ignore
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      console.log('✅ Webpack client config is used');
+
+      config.plugins.push(
+        new ModuleFederationPlugin({})
+      );
+    }
+
+    return config;
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
